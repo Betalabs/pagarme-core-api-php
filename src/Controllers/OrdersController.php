@@ -394,7 +394,8 @@ class OrdersController extends BaseController
             'user-agent'    => BaseController::USER_AGENT,
             'Accept'        => 'application/json',
             'content-type'  => 'application/json; charset=utf-8',
-            'idempotency-key' => $idempotencyKey
+            'idempotency-key' => $idempotencyKey,
+            'ServiceRefererName' => '62faf839f6b3230019fd1eb0'
         );
 
         //json encode body
