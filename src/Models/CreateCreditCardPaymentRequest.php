@@ -108,10 +108,10 @@ class CreateCreditCardPaymentRequest implements JsonSerializable
 
     /**
      * Defines whether the card has been used one or more times.
-     * @maps recurrency_cycle
-     * @var string|null $recurrencyCycle public property
+     * @maps recurrence_cycle
+     * @var string|null $recurrenceCycle public property
      */
-    public $recurrencyCycle;
+    public $recurrenceCycle;
     
     /**
      * Constructor to set initial or default values of member properties
@@ -134,8 +134,8 @@ class CreateCreditCardPaymentRequest implements JsonSerializable
      * @param CreateCardPaymentContactlessRequest $contactless          Initialization value for $this->contactless
      * @param bool                                $autoRecovery         Initialization value for $this->autoRecovery
      * @param string                              $operationType        Initialization value for $this->operationType
-     * @param string                              $recurrencyCycle      Initialization value for $this-
-     *                                                                    >recurrencyCycle
+     * @param string                              $recurrenceCycle      Initialization value for $this-
+     *                                                                    >recurrenceCycle
      */
     public function __construct()
     {
@@ -155,7 +155,7 @@ class CreateCreditCardPaymentRequest implements JsonSerializable
                 $this->contactless          = func_get_arg(11);
                 $this->autoRecovery         = func_get_arg(12);
                 $this->operationType        = func_get_arg(13);
-                $this->recurrencyCycle      = func_get_arg(14);
+                $this->recurrenceCycle      = func_get_arg(14);
                 break;
 
             default:
@@ -186,7 +186,7 @@ class CreateCreditCardPaymentRequest implements JsonSerializable
         $json['contactless']            = $this->contactless;
         $json['auto_recovery']          = $this->autoRecovery;
         $json['operation_type']         = $this->operationType;
-        $json['recurrency_cycle']       = $this->recurrencyCycle;
+        $json['recurrence_cycle']       = $this->recurrenceCycle;
         return $json;
     }
 }
